@@ -1,0 +1,19 @@
+
+[Anjuta]
+Maximized=1
+Geometry=1600x1125+0+25
+
+[Execution]
+Program arguments=
+Program uri=file:///home/wil/Projects/dev/StackPack/src/stackpack
+Run in terminal=2
+Working directories=
+Environment variables=
+
+[Build]
+Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized
+Selected Configuration=Default
+
+[Debugger]
+Source directories=
+Stop at beginning=2

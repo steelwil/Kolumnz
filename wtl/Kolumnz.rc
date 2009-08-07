@@ -1,0 +1,597 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SCREEN0             BITMAP                  "res\\screen0.bmp"
+IDB_SCREEN1             BITMAP                  "res\\screen1.bmp"
+IDB_SCREEN2             BITMAP                  "res\\screen2.bmp"
+IDB_SCREEN3             BITMAP                  "res\\screen3.bmp"
+IDB_SCREEN4             BITMAP                  "res\\screen4.bmp"
+IDB_SCREEN5             BITMAP                  "res\\screen5.bmp"
+IDB_SCREEN6             BITMAP                  "res\\screen6.bmp"
+IDB_SCREEN7             BITMAP                  "res\\screen7.bmp"
+IDB_SCREEN8             BITMAP                  "res\\screen8.bmp"
+IDB_SCREEN9             BITMAP                  "res\\screen9.bmp"
+IDR_MAINFRAME           BITMAP                  "res\\mainfram.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\main_fra.ico"
+IDR_BOGUSICON           ICON                    "res\\idr_bogu.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ENTERHIGHSCORE DIALOGEX 0, 0, 177, 156
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_NAME,7,102,126,12
+    EDITTEXT        IDC_QUOTE,7,137,126,12
+    LTEXT           "Your Cool Name...",IDC_STATIC,7,89,68,10,NOT WS_GROUP
+    LTEXT           "Your Cool Quote...",IDC_STATIC,7,124,102,9,NOT WS_GROUP
+    CTEXT           "Congrats! You have made the KOLUMNZ Hall of Fame!",
+                    IDC_STATIC,7,7,144,17,NOT WS_GROUP
+    CTEXT           "Enter your cool name and your cool quote into the boxes below...",
+                    IDC_STATIC,7,26,148,20,NOT WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,8,55,20,20
+    ICON            IDR_BOGUSICON,IDC_STATIC,27,55,20,20
+    ICON            IDR_MAINFRAME,IDC_STATIC,47,55,20,20
+    ICON            IDR_BOGUSICON,IDC_STATIC,67,55,20,20
+    ICON            IDR_MAINFRAME,IDC_STATIC,88,55,20,20
+    ICON            IDR_BOGUSICON,IDC_STATIC,107,55,20,20
+    ICON            IDR_MAINFRAME,IDC_STATIC,127,55,20,20
+    ICON            IDR_BOGUSICON,IDC_STATIC,148,55,20,20
+    PUSHBUTTON      "OK",1,143,105,27,44
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,49,163,3
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,79,163,3
+END
+
+IDD_HIGHSCORETABLE DIALOGEX 0, 0, 419, 239
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CTEXT           "Kolumnz Experts",IDC_TITLE_STATIC,139,3,135,16,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,2,22,410,4
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,2,198,410,4
+    PUSHBUTTON      "OK",IDC_OK_BUTTON,93,208,227,22
+    ICON            IDR_MAINFRAME,-1,5,209,20,20
+    ICON            IDR_BOGUSICON,-1,389,209,20,20
+    LTEXT           "Name",IDC_NAME_STATIC,143,31,130,162
+    LTEXT           "Quote",IDC_QUOTE_STATIC,281,31,130,162
+    CTEXT           "Date",IDC_DATE_STATIC,97,31,38,162
+    CTEXT           "Level",IDC_LEVEL_STATIC,73,31,18,162
+    CTEXT           "Blocks",IDC_BLOCKS_STATIC,50,31,20,162
+    CTEXT           "Rnk",IDC_RANK_STATIC,2,31,13,162
+    CONTROL         "",-1,"Static",SS_GRAYFRAME,276,31,2,165
+    CONTROL         "",-1,"Static",SS_GRAYFRAME,138,31,2,165
+    CONTROL         "",-1,"Static",SS_GRAYFRAME,92,31,2,165
+    CONTROL         "",-1,"Static",SS_GRAYFRAME,18,31,2,165
+    CONTROL         "",-1,"Static",SS_GRAYFRAME,48,31,2,165
+    CONTROL         "",-1,"Static",SS_GRAYFRAME,71,31,2,165
+    CTEXT           "Score",IDC_SCORE_STATIC,21,31,22,162
+END
+
+IDD_OPTIONS_DIALOG DIALOGEX 0, 0, 257, 157
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Customize Game"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Single",IDC_PLAYERS_RADIO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,17,29,35,10
+    CONTROL         "Double",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,17,43,39,10
+    CONTROL         "Piece Preview",IDC_PREVEIW_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,11,64,61,10
+    CONTROL         "Penalize Opponent",IDC_PENALIZE_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,77,76,10
+    EDITTEXT        IDC_ROWS_EDIT,60,94,30,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin2",IDC_ROWS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,83,94,11,
+                    14
+    EDITTEXT        IDC_LEVEL_EDIT,60,111,30,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin1",IDC_LEVEL_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,83,111,11,
+                    14
+    EDITTEXT        IDC_ENDLEVEL_EDIT,60,128,30,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "",IDC_ENDLEVEL_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,83,128,11,
+                    14
+    CONTROL         "Flat",IDC_PIECESTYLE_RADIO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,118,29,47,10
+    CONTROL         "3 D",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,118,43,39,
+                    10
+    CONTROL         "Pyrimid",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,118,56,
+                    45,10
+    CONTROL         "Vertical Grid Lines",IDC_GRIDVERTICAL_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,111,81,78,10
+    CONTROL         "Horizontal Grid Lines",IDC_GRIDHORIZONTAL_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,111,94,78,10
+    CONTROL         "Sound",IDC_SOUND_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,107,37,10
+    DEFPUSHBUTTON   "OK",IDOK,200,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,200,26,50,14
+    PUSHBUTTON      "Keyboard...",IDC_KEYBOARD_BUTTON,200,45,50,14
+    GROUPBOX        "Players",IDC_STATIC,11,14,76,42
+    LTEXT           "Starting Rows",IDC_STATIC,11,94,45,8
+    LTEXT           "Starting Level",IDC_STATIC,11,111,45,8
+    LTEXT           "Ending Level",IDC_STATIC,11,128,45,8
+    GROUPBOX        "Cosmetics",IDC_STATIC,103,7,89,143
+    GROUPBOX        "Pieces",IDC_STATIC,111,17,73,54
+    GROUPBOX        "Game",IDC_STATIC,7,7,89,143
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About Tetris"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Kolumnz Version 1.1.20050305",IDC_STATIC,40,8,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999, 2001",IDC_STATIC,40,47,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "Coded by W.G. Bell",IDC_STATIC,40,21,119,8
+    LTEXT           "email: william.belll@absamail.co.za",IDC_STATIC,40,34,
+                    119,8
+    LTEXT           "Kolumnz is based on a game xcolumns for the X Windows system, by Jay Geertson of Hewlett Packard.",
+                    IDC_STATIC,40,61,188,18
+END
+
+IDD_CONTROLS_DIALOG DIALOGEX 0, 0, 254, 116
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Player Controls"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,197,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,197,24,50,14
+    CONTROL         "HotKey1",IDC_LEFT1_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,57,18,48,14
+    CONTROL         "HotKey2",IDC_RIGHT1_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,57,37,48,14
+    CONTROL         "HotKey3",IDC_DROP1_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,57,75,48,14
+    CONTROL         "HotKey4",IDC_ROTATE1_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,57,94,48,14
+    CONTROL         "HotKey5",IDC_LEFT2_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,123,18,48,14
+    CONTROL         "HotKey6",IDC_RIGHT2_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,123,37,48,14
+    CONTROL         "HotKey7",IDC_DROP2_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,123,75,48,14
+    CONTROL         "HotKey8",IDC_ROTATE2_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,123,94,48,14
+    LTEXT           "Move Left",IDC_STATIC,7,21,33,8
+    LTEXT           "Move Right",IDC_STATIC,7,40,38,8
+    LTEXT           "Drop",IDC_STATIC,7,78,16,8
+    LTEXT           "Rotate",IDC_STATIC,7,97,22,8
+    LTEXT           "Player One",IDC_STATIC,57,7,36,8
+    LTEXT           "Player Two",IDC_STATIC,123,7,36,8
+    PUSHBUTTON      "Defaults",IDC_DEFAULTS_BUTTON,197,42,50,14
+    CONTROL         "HotKey4",IDC_DOWN1_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,57,56,48,14
+    CONTROL         "HotKey8",IDC_DOWN2_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,123,56,48,14
+    LTEXT           "Move Down",IDC_STATIC,7,59,40,8
+END
+
+IDD_NEWGAME_DIALOG DIALOGEX 0, 0, 241, 117
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "New Custom Game"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_TITLE_EDIT,15,16,156,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BASE_EDIT,46,52,17,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin3",IDC_BASE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,68,52,12,14
+    EDITTEXT        IDC_HEIGHT_EDIT,128,52,17,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "Spin4",IDC_HEIGHT_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,150,52,
+                    12,14
+    EDITTEXT        IDC_LENGTH_EDIT,46,91,17,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin4",IDC_LENGTH_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,68,91,11,
+                    14
+    EDITTEXT        IDC_COLORS_EDIT,128,91,17,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "Spin4",IDC_COLORS_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,150,91,
+                    11,14
+    DEFPUSHBUTTON   "Save...",IDOK,184,7,50,14,NOT WS_TABSTOP
+    PUSHBUTTON      "Cancel",IDCANCEL,184,26,50,14,NOT WS_TABSTOP
+    LTEXT           "Base",IDC_STATIC,15,54,17,8
+    LTEXT           "Height",IDC_STATIC,97,54,22,8
+    GROUPBOX        "Grid Size",IDC_STATIC,7,40,170,33
+    GROUPBOX        "Game Title",IDC_STATIC,7,7,170,28
+    GROUPBOX        "Block Properties",IDC_STATIC,7,81,170,28,WS_TABSTOP
+    LTEXT           "Length",IDC_STATIC,15,94,23,8
+    LTEXT           "Colours",IDC_STATIC,97,94,24,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ENTERHIGHSCORE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_OPTIONS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        VERTGUIDE, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_CONTROLS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_NEWGAME_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Coded by: W.G. Bell"
+            VALUE "FileDescription", "Kolumnz WTL Application"
+            VALUE "FileVersion", "1, 0, 0, 20050305"
+            VALUE "InternalName", "Kolumnz"
+            VALUE "LegalCopyright", "Copyright 2001-2005"
+            VALUE "OriginalFilename", "Kolumnz.exe"
+            VALUE "ProductName", "Kolumnz Module"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CLEARCURSOR         CURSOR                  "res\\clearcur.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP_CONTENTS,       VIRTKEY, NOINVERT
+    VK_F2,          ID_GAME_PLAY,           VIRTKEY, NOINVERT
+    VK_F3,          ID_GAME_PAUSEF3,        VIRTKEY, NOINVERT
+    VK_F4,          ID_GAME_HIGHSCORES,     VIRTKEY, NOINVERT
+    VK_F5,          ID_OPTIONS_CUSTOMIZE,   VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Junior Kolumnz",              ID_FILE_JUNIORKOLUMNZ
+        MENUITEM "Classic Kolumnz",             ID_FILE_CLASSICKOLUMNZ
+        MENUITEM "Cool Kolumnz",                ID_FILE_COOLKOLUMNZ
+        MENUITEM "Kolumn Mania",                ID_FILE_KOLUMNZMANIA
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt-F4",               ID_APP_EXIT
+    END
+    POPUP "&Game"
+    BEGIN
+        MENUITEM "Play\tF2",                    ID_GAME_PLAY
+        MENUITEM "&Pause\tF3",                  ID_GAME_PAUSEF3
+        MENUITEM "&High Scores... \tF4",        ID_GAME_HIGHSCORES
+        MENUITEM "P&roperties",                 ID_GAME_PROPERTIES
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "Customize...\tF5",            ID_OPTIONS_CUSTOMIZE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Help Contents\tF1",           ID_HELP_CONTENTS
+        MENUITEM SEPARATOR
+        MENUITEM "&About Kolumnz...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    SEPARATOR
+    BUTTON      ID_GAME_PLAY
+    BUTTON      ID_GAME_PAUSEF3
+    BUTTON      ID_GAME_HIGHSCORES
+    SEPARATOR
+    BUTTON      ID_OPTIONS_CUSTOMIZE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Kolumnz"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new game\nNew"
+    ID_FILE_OPEN            "Open an existing game\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display game information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the game\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this custom game."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_GAME_PAUSEF3         "Pause the game.\nPause"
+    ID_GAME_HIGHSCORES      "Show the highest scores.\nTop 10"
+    ID_GAME_PLAY            "Start the game.\nStart"
+    ID_FILE_KOLUMNZMANIA    "Open Kolumnz Mania. The name says it all."
+    ID_FILE_COOLKOLUMNZ     "Open Cool Kolumnz. No difficult shapes."
+    ID_FILE_CLASSICKOLUMNZ  "Open the Classic Kloumnz Game"
+    ID_FILE_JUNIORKOLUMNZ   "Open Junior Kolumnz. Only the most simple shapes."
+    ID_HELP_CONTENTS        "Show this games properties.\nProperties"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_GAME_PROPERTIES      "View game properties\nProperties"
+    ID_OPTIONS_CUSTOMIZE    "Customize the current game.\nSettings"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (South Africa) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENS)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_SOUTH_AFRICA
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPERTIES DIALOGEX 0, 0, 261, 71
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,204,7,50,14
+    LTEXT           "Base 10 Height 20",IDC_GRID_STATIC,87,7,109,11,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Grid Size:",IDC_STATIC,7,7,65,11
+    LTEXT           "Limit to level:",IDC_STATIC,7,52,65,11
+    LTEXT           "No Limitation",IDC_LEVELLIMIT_STATIC,87,52,109,11,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Block Length:",IDC_STATIC,7,22,65,11
+    LTEXT           "Block Colours:",IDC_STATIC,7,37,65,11
+    LTEXT           "Small, Standard, Large",IDC_BLOCKSIZE_STATIC,87,22,109,
+                    11,0,WS_EX_STATICEDGE
+    LTEXT           "Lowest, Low, Meduim, High",IDC_BLOCKCOMPLEX_STATIC,87,
+                    37,109,11,0,WS_EX_STATICEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (South Africa) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
