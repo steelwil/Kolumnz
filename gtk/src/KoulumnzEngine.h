@@ -1,7 +1,7 @@
 /*
  *  Copyright (C) 2006 - William Bell 
  *
- *  This file is part of the StackPack game
+ *  This file is part of the Kolumnz game
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by

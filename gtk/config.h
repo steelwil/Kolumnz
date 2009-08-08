@@ -12,14 +12,14 @@
 #define PACKAGE_PIXMAPS_DIR "/usr/local/share/pixmaps"
 #define PACKAGE_HELP_DIR "/usr/local/share/help"
 #define PACKAGE_MENU_DIR "/usr/local/share"
-#define PACKAGE_SOURCE_DIR "/home/wil/Projects/dev/StackPack"
-#define GETTEXT_PACKAGE "StackPack"
+#define PACKAGE_SOURCE_DIR "/home/wil/Projects/dev/Kolumnz/gtk"
+#define GETTEXT_PACKAGE "Kolumnz"
 
 /* always defined to indicate that i18n is enabled */
 #define ENABLE_NLS 1
 
 /* Package name for gettext */
-#define GETTEXT_PACKAGE "StackPack"
+#define GETTEXT_PACKAGE "Kolumnz"
 
 /* Define to 1 if you have the `bind_textdomain_codeset' function. */
 #define HAVE_BIND_TEXTDOMAIN_CODESET 1
@@ -65,6 +65,10 @@
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#define LT_OBJDIR ".libs/"
 
 /* Name of package */
 #define PACKAGE "StackPack"

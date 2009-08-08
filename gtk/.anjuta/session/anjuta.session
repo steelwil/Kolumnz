@@ -3,17 +3,21 @@
 Maximized=1
 Geometry=1600x1125+0+25
 
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
 [Execution]
-Program arguments=
-Program uri=file:///home/wil/Projects/dev/StackPack/src/stackpack
+Program uri=file:///home/wil/Projects/dev/Kolumnz/gtk/src/kolumnz%%%file:///home/wil/Projects/dev/Kolumnz/gtk/kolumnz%%%file:///home/wil/Projects/dev/StackPack/src/stackpack
 Run in terminal=2
-Working directories=
-Environment variables=
+Working directories=file:///home/wil/Projects/dev/Kolumnz/gtk
 
 [Build]
 Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized
 Selected Configuration=Default
+BuildArgs/Default=
+BuildArgs/Debug='CFLAGS=-g -O0' 'CXXFLAGS=-g -O0' 'JFLAGS=-g -O0' 'FFLAGS=-g -O0'
+BuildArgs/Profiling='CFLAGS=-g -pg' 'CXXFLAGS=-g -pg' 'JFLAGS=-g -pg' 'FFLAGS=-g -pg'
+BuildArgs/Optimized='CFLAGS=-O2' 'CXXFLAGS=-O2' 'JFLAGS=-O2' 'FFLAGS=-O2'
 
 [Debugger]
-Source directories=
 Stop at beginning=2

@@ -1,7 +1,7 @@
 /*
  *  Copyright (C) 2006 - William Bell 
  *
- *  This file is part of the StackPack game
+ *  This file is part of the Kolumnz game
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@
 #include "gameData.h"
 #include "userData.h"
 #include "preferences.h"
-#include "StackPackEngine.h"
+#include "KolumnzEngine.h"
 #include "view.h"
 #include "scoresDlg.h"
 #include "propertiesDlg.h"
@@ -238,7 +238,7 @@ static GtkActionEntry entries[] = {
 	{ "helpAbout", GTK_STOCK_ABOUT, "_About", NULL,
 		"About this game", G_CALLBACK (activate_about) },
 	{ "helpContents", GTK_STOCK_HELP, "_Contents", "F1",
-		"Open the StackPack manual", G_CALLBACK (activate_action) },
+		"Open the Kolumnz manual", G_CALLBACK (activate_action) },
 	{ "new", GTK_STOCK_NEW, "_New", "<control>N",
 		"Starts a new game", G_CALLBACK (menuitem_new) },
 	{ "pause", GTK_STOCK_MEDIA_PAUSE, "_Pause", "Pause",
@@ -632,7 +632,7 @@ int main( int   argc,
     gtk_window_resize (GTK_WINDOW (window), userData.width, userData.height);
 	printf("in main x=%d, y=%d\n", userData.x, userData.y);
 	gtk_window_move(GTK_WINDOW (window), userData.x, userData.y);
-    gtk_window_set_title (GTK_WINDOW (window), "GTK StackPack");
+    gtk_window_set_title (GTK_WINDOW (window), "GTK Kolumnz");
     g_signal_connect (G_OBJECT (window), "delete_event",
                       G_CALLBACK (delete_event), NULL);
     /* A vbox to put a menu and a drawing_area in: */

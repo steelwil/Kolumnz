@@ -1,7 +1,7 @@
 /*
  *  Copyright (C) 2006 - William Bell 
  *
- *  This file is part of the StackPack game
+ *  This file is part of the Kolumnz game
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include "StackPackEngine.h"
+#include "KolumnzEngine.h"
 
 //static UINT speedInt[]={1375, 1375, 1250, 1125, 875, 750, 625, 375, 250, 125 };
 //static UINT speedInt[] = {615, 600, 540, 465, 390, 315, 240, 165, 90, 75 };
@@ -65,12 +65,12 @@ static unsigned long Shapes[][4] =
 	{0x003e0000, 0x21084200, 0x003e0000, 0x21084200}	// 27 5 block I  Lowest HSB
 };
 
-/* DWORD WINAPI StackPackThread(LPVOID pData)
+/* DWORD WINAPI KolumnzThread(LPVOID pData)
  * {
  * 	DWORD dwMilliseconds = 0;   
  * 
- * 	CStackPackEngine* pT;
- * 	pT = (CStackPackEngine*) pData;
+ * 	CKolumnzEngine* pT;
+ * 	pT = (CKolumnzEngine*) pData;
  * 
  * 	WaitForSingleObject(pT->m_hEventRun, INFINITE);
  * 	// loop but check for kill notification

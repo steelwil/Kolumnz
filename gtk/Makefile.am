@@ -5,7 +5,7 @@
 
 SUBDIRS = po src
 
-stackpackdocdir = ${prefix}/doc/StackPack
+stackpackdocdir = ${prefix}/doc/Kolumnz
 stackpackdoc_DATA = \
 	README\
 	COPYING\
@@ -16,6 +16,28 @@ stackpackdoc_DATA = \
 	TODO
 
 EXTRA_DIST = $(stackpackdoc_DATA)
+
+bin_PROGRAMS = \
+	kolumnz
+
+kolumnz_SOURCES = \
+	src/gameData.c\
+	src/main.c \
+	src/EnterNameDlg.c \
+	src/EnterNameDlg.h \
+	src/gameData.h \
+	src/KoulumnzEngine.c \
+	src/KoulumnzEngine.h \
+	src/preferences.c \
+	src/propertiesDlg.c \
+	src/propertiesDlg.h \
+	src/scoresDlg.c \
+	src/scoresDlg.h \
+	src/userData.c \
+	src/userData.h \
+	src/view.c \
+	src/view.h \
+	src/preferences.h
 
 # Copy all the spec files. Of cource, only one is actually used.
 dist-hook:
