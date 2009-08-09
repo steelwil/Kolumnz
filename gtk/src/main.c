@@ -1,21 +1,21 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*- */
 /*
- *  Copyright (C) 2006 - William Bell 
+ * Copyright (C) William Bell 2001-2009 <william.bell@frog.za.net>
+ * 
+ * This file is part of the Kolumnz game
  *
- *  This file is part of the Kolumnz game
- *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Kolumnz is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Kolumnz is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 #include <stdio.h>
@@ -24,7 +24,7 @@
 #include "gameData.h"
 #include "userData.h"
 #include "preferences.h"
-#include "KolumnzEngine.h"
+#include "StackPackEngine.h"
 #include "view.h"
 #include "scoresDlg.h"
 #include "propertiesDlg.h"
@@ -107,12 +107,12 @@ static void activate_about (GtkAction *action)
 	gtk_about_dialog_set_email_hook (AboutDialogActivateEmailLinkFunc, NULL, NULL);
 	gtk_about_dialog_set_url_hook (AboutDialogActivateLinkFunc, NULL, NULL);
 	gtk_show_about_dialog(GTK_WINDOW (window),
-							"copyright", "Copyright © 2006-2008 William Bell",
-							"comments", "A Tetris clone.",
+							"copyright", "Copyright © 2006-2009 William Bell",
+							"comments", "A Kolumnz clone.",
 							"authors", authors,
 							"version", "1.2",
-						    "website-label", "Stackpack Web Stite",
-							"website", "http://www.frog.za.net/stackpack/stackpack.html",
+						    "website-label", "Kolumnz Web Stite",
+							"website", "http://www.frog.za.net/kolumnz/kolumnz.html",
 							NULL);
 }
 
@@ -238,7 +238,7 @@ static GtkActionEntry entries[] = {
 	{ "helpAbout", GTK_STOCK_ABOUT, "_About", NULL,
 		"About this game", G_CALLBACK (activate_about) },
 	{ "helpContents", GTK_STOCK_HELP, "_Contents", "F1",
-		"Open the Kolumnz manual", G_CALLBACK (activate_action) },
+		"Open the StackPack manual", G_CALLBACK (activate_action) },
 	{ "new", GTK_STOCK_NEW, "_New", "<control>N",
 		"Starts a new game", G_CALLBACK (menuitem_new) },
 	{ "pause", GTK_STOCK_MEDIA_PAUSE, "_Pause", "Pause",
@@ -632,7 +632,7 @@ int main( int   argc,
     gtk_window_resize (GTK_WINDOW (window), userData.width, userData.height);
 	printf("in main x=%d, y=%d\n", userData.x, userData.y);
 	gtk_window_move(GTK_WINDOW (window), userData.x, userData.y);
-    gtk_window_set_title (GTK_WINDOW (window), "GTK Kolumnz");
+    gtk_window_set_title (GTK_WINDOW (window), "GTK StackPack");
     g_signal_connect (G_OBJECT (window), "delete_event",
                       G_CALLBACK (delete_event), NULL);
     /* A vbox to put a menu and a drawing_area in: */
