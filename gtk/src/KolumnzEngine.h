@@ -41,7 +41,6 @@ struct GameData
 	unsigned long m_FallingPiece;
 	int m_FallingRow;
 	int m_FallingCol;
-	int m_MaxPieces;
 	int m_Base;
 	int m_Height;
 	int m_MoveCount;

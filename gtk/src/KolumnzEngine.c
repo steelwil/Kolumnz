@@ -294,7 +294,7 @@ int GameStep(struct GameData* pGameData)
 		pGameData->m_FallingPiece = pGameData->m_Preview;
 		pGameData->m_BlkRot = 0;
 		pGameData->m_BlkNum = pGameData->m_BlkPreviewNum;
-		pGameData->m_BlkPreviewNum = (int)(rand()/(double)0x7fffffff*pGameData->m_MaxPieces);
+		pGameData->m_BlkPreviewNum = (int)(rand()/(double)0x7fffffff*pGameData->m_TotalColors);
 		pGameData->m_Preview = pGameData->m_Shapes[pGameData->m_BlkPreviewNum][pGameData->m_BlkRot];
 		pGameData->m_FallingRow = 0;
 		if (!PlacePiece(pGameData, pGameData->m_FallingRow, pGameData->m_FallingCol) || pGameData->m_Level == pGameData->m_LastLevel+1)	// try to place
@@ -700,7 +700,7 @@ int AddRows(struct GameData* pGameData, int nRows)
 				pGameData->m_Grid[r][c] = pGameData->m_Grid[r+1][c];
 		// add random pieces to the bottom
 		for (c=0; c<pGameData->m_Base; c++)
-			pGameData->m_Grid[pGameData->m_Height-1][c] = rand()%pGameData->m_MaxPieces+1;
+			pGameData->m_Grid[pGameData->m_Height-1][c] = rand()%pGameData->m_TotalColors+1;
 		// add about 30% spaces to the rows
 		pGameData->m_Grid[pGameData->m_Height-1][rand()%pGameData->m_Base] = 0;
 		for (c=0; c<pGameData->m_Base; c++)
