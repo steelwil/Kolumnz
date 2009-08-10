@@ -29,7 +29,7 @@ void ReadUserData(struct UserDataStr* data)
 	GKeyFile* key_file = g_key_file_new();
 	GError *error;
 	if (TRUE == g_key_file_load_from_file(key_file,
-                                          "stackpack.conf",
+                                          "kolumnz.conf",
                                           G_KEY_FILE_NONE,
                                           NULL))
 	{
@@ -267,7 +267,7 @@ void SaveUserData(struct UserDataStr* data)
 	gchar* buf = g_key_file_to_data(key_file,
 									&length,
 									&error);
-	FILE* fd = fopen("stackpack.conf", "w");
+	FILE* fd = fopen("kolumnz.conf", "w");
 	if (fd != NULL)
 	{
 		fwrite(buf, sizeof(gchar), length, fd);
