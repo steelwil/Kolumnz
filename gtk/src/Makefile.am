@@ -25,12 +25,12 @@ kolumnz_SOURCES = \
 	propertiesDlg.h   \
 	scoresDlg.c   \
 	scoresDlg.h   \
-	StackPackEngine.c   \
-	StackPackEngine.h   \
 	userData.c   \
 	userData.h   \
 	view.c   \
-	view.h
+	view.h   \
+	KolumnzEngine.c   \
+	KolumnzEngine.h
 
 kolumnz_LDFLAGS = 
 

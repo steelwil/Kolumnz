@@ -21,7 +21,7 @@
 #include <gtk/gtk.h>
 #include "scoresDlg.h"
 #include "gameData.h"
-#include "StackPackEngine.h"
+#include "KolumnzEngine.h"
 
 extern struct GameDataStr gameData;
 extern struct GameData gameEngineData[cMAXPLAYERS];

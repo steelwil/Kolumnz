@@ -24,7 +24,7 @@
 #include "gameData.h"
 #include "userData.h"
 #include "preferences.h"
-#include "StackPackEngine.h"
+#include "KolumnzEngine.h"
 #include "view.h"
 #include "scoresDlg.h"
 #include "propertiesDlg.h"

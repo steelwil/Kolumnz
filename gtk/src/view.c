@@ -22,7 +22,7 @@
 #include <string.h>
 #include "gameData.h"
 #include "userData.h"
-#include "StackPackEngine.h"
+#include "KolumnzEngine.h"
 
 extern struct GameDataStr gameData;
 extern struct UserDataStr userData;
@@ -395,7 +395,7 @@ void viewPaintScore(GtkWidget* widget, int p)
 {
 	/* display the score */
 	//g_message("in viewPaintScore");
-	int r, c;
+	int r;
 	char out[16];
 	out[0] = 0;
 	int middle = m_ScoreRect[p].x+m_ScoreRect[p].width/2;
@@ -487,41 +487,32 @@ void viewPaintScore(GtkWidget* widget, int p)
 	int bs = 10;
 	if (GameGetPreview(&gameEngineData[p], &icolor))
 	{
-		rect.x = m_ScoreRect[p].x+16;
+		rect.x = m_ScoreRect[p].x+26;
 		rect.y = m_ScoreRect[p].y+130;
-		rect.width = 1 + (bs+2)*4;
+		rect.width = 1 + (bs+2)*2;
 		rect.height = 1 + (bs+2)*4;
 		viewPaintBlackBlock(widget, &rect);
 
 		unsigned long pv = GameGetPreview(&gameEngineData[p], &icolor);
 		icolor++;
-		unsigned long mask;
-		for (r=0; r<5; r++)
+		for (r=0; r<gameEngineData[p].m_PieceLength; r++)
 		{
-			for (c=0; c<5; c++)
+			rect.x = m_ScoreRect[p].x+26+bs+1;
+			rect.y = m_ScoreRect[p].y+130+(r+1)*bs+1;
+			rect.width = bs-2;
+			rect.height = bs-2;
+			icolor = ((pv>>(28-4*r))%16-1)%15+1;
+			switch (userData.m_PieceStyle)
 			{
-				rect.x = m_ScoreRect[p].x+16+c*bs+1;
-				rect.y = m_ScoreRect[p].y+130+r*bs+1;
-				rect.width = bs-2;
-				rect.height = bs-2;
-				mask = 0x80000000>>(r*5+c);
-				if (pv&mask)
-				{
-					switch (userData.m_PieceStyle)
-					{
-					case 0:
-						viewPaintFlatBlock(widget, (char)icolor, &rect);
-						break;
-					case 1:
-						viewPaint3DBlock(widget, (char)icolor, &rect);
-						break;
-					case 2:
-						viewPaintPyrimidBlock(widget, (char)icolor, &rect);
-						break;
-					}
-				}
-				else
-					viewPaintBlackBlock(widget, &rect);
+			case 0:
+				viewPaintFlatBlock(widget, (char)icolor, &rect);
+				break;
+			case 1:
+				viewPaint3DBlock(widget, (char)icolor, &rect);
+				break;
+			case 2:
+				viewPaintPyrimidBlock(widget, (char)icolor, &rect);
+				break;
 			}
 		}
 	}
