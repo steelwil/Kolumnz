@@ -17,7 +17,8 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 The gtk directory contains the gtk port 
-(THIS IS STILL A WORK IN PROGRESS AND IS NOT FUNCTIONAL)
+(THIS IS STILL A WORK IN PROGRESS but is playable)
 
 The wtl directory contains the Windows Tempelate Library port
