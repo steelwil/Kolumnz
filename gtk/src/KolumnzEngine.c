@@ -84,7 +84,9 @@ void GameCreate(struct GameData* pGameData,
 							int startingRows,
 							int preview,
 							int blkType,
-							int lastLevel)
+							int lastLevel,
+							int totalColors,
+							int pieceLength)
 {
 	pGameData->m_MoveCount = 0;
 	pGameData->m_DropCount = 0;
@@ -106,8 +108,8 @@ void GameCreate(struct GameData* pGameData,
 	pGameData->m_Level = startingLevel;
 	pGameData->m_StepDuration = 640-55*pGameData->m_Level;	// speedInt[m_Level-1];
 	pGameData->m_PiecePreview = preview;
-	pGameData->m_TotalColors = 7;//totalColors;
-	pGameData->m_PieceLength = 3;//pieceLength;
+	pGameData->m_TotalColors = totalColors;
+	pGameData->m_PieceLength = pieceLength;
 	
 	pGameData->m_LastLevel = lastLevel;
 

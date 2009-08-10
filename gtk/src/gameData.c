@@ -38,23 +38,25 @@ void Initialize(struct GameDataStr* data)
 	struct tm* nowtime = localtime(&now);
 	unsigned long nowDate = (nowtime->tm_year+1900)*10000 + (nowtime->tm_mon+1)*100 + nowtime->tm_mday;
 
-	data->m_Base = 10;
-	data->m_Height = 20;
-	data->m_BlkType = 0x1fc;
+	data->m_Base = 6;
+	data->m_Height = 18;
+	data->m_BlkSize = 3;
+	data->m_Colors = 6;
 	data->m_StartingLevel = 1;
 	data->m_StartingRows = 0;
-	data->m_LastLevel = 10;	 /* Maximum level of this game */
-	data->m_EndLevel = 10;	/* current last level of this game m_EndLevel <= m_LastLevel */
+	data->m_LastLevel = 10;	 // Maximum level of this game
+	data->m_EndLevel = 10;		 // current last level of this game m_EndLevel <= m_LastLevel
 	data->m_Spare1 = 0;
+	data->m_PiecePreview = 1;
 	data->m_Penalize = 1;
-	strcpy(data->m_Comment, "Standard StackPack");
+	strcpy(data->m_Comment, "Standard Kolumnz");
 	for (i=0; i<10; i++)
 	{
 		data->m_HighScore[i].level = 1;
-		strcpy(data->m_HighScore[i].name, " ");
-		strcpy(data->m_HighScore[i].quote, " ");
+		data->m_HighScore[i].name[0] = 0;
+		data->m_HighScore[i].quote[0] = 0;
 		data->m_HighScore[i].date = nowDate;
-		data->m_HighScore[i].score = (10-i)*50*data->m_EndLevel;
+		data->m_HighScore[i].score = (10-i)*500;
 		data->m_HighScore[i].rows = 0;
 	}
 }
@@ -219,37 +221,32 @@ void ReadGameData(struct GameDataStr* data, const gchar *filename)
 /*----------------------------------------------------------------------------*/
 void InitializeGameData(struct GameDataStr* data, const char* filename)
 {
+	printf("%s", filename);
 	Initialize(data);
 	
 	ReadGameData(data, filename);
 	if (!strcmp(filename, "junior.gam"))
 	{
-		if (data->m_BlkType != 0xd7)
-			Initialize(data);
-		strcpy(data->m_Comment, "Easy StackPack");
-		data->m_BlkType = 0xd7;
+		data->m_Base = 6;
+		data->m_BlkSize = 2;
+		data->m_Colors = 5;
+		strcpy(data->m_Comment, "Easy Kolumnz");
 	}
 	else if (!strcmp(filename, "classic.gam"))
 	{
-		if (data->m_BlkType != 0x1fc)
-			Initialize(data);
-		strcpy(data->m_Comment, "Classic StackPack");
+		strcpy(data->m_Comment, "Classic Kolumnz");
 	}
 	else if (!strcmp(filename, "cool.gam"))
 	{
-		if (data->m_BlkType != 0x79879d7)
-			Initialize(data);
-		strcpy(data->m_Comment, "Cool StackPack");
-		data->m_Base = 14;
-		data->m_BlkType = 0x79879d7;
+		strcpy(data->m_Comment, "Cool Kolumnz");
+		data->m_Base = 10;
 	}
 	else if (!strcmp(filename, "mania.gam"))
 	{
-		if (data->m_BlkType != 0x7fffffc)
-			Initialize(data);
-		strcpy(data->m_Comment, "StackPack Mania says it all!");
-		data->m_BlkType = 0x7fffffc;
-		data->m_Base = 20;
+		strcpy(data->m_Comment, "KolumnzMania says it all!");
+		data->m_BlkSize = 4;
+		data->m_Colors = 10;
+		data->m_Base = 14;
 	}
 
 }

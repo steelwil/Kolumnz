@@ -38,9 +38,12 @@ struct GameDataStr
 {
 	int m_Base;
 	int m_Height;
+	int m_BlkSize;
+	int m_Colors;
 	int m_BlkType;
 	int m_StartingLevel;
 	int m_StartingRows;
+	int m_PiecePreview;
 	int m_LastLevel;	 // Maximum level of this game
 	int m_EndLevel;	 // current last level of this game m_EndLevel <= m_LastLevel
 	int m_Spare1;

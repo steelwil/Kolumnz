@@ -91,7 +91,7 @@ void AboutDialogActivateEmailLinkFunc  (GtkAboutDialog *about,
 	GError *err = NULL;
 	char *address;
 
-	address = g_strdup_printf ("mailto:%s?subject=Stackpack Game Feedback", link_);
+	address = g_strdup_printf ("mailto:%s?subject=Kolumnz Game Feedback", link_);
 	gtk_show_uri(gdk_screen_get_default (), address, gtk_get_current_event_time (), &err);
 	g_free (address);
 }
@@ -238,7 +238,7 @@ static GtkActionEntry entries[] = {
 	{ "helpAbout", GTK_STOCK_ABOUT, "_About", NULL,
 		"About this game", G_CALLBACK (activate_about) },
 	{ "helpContents", GTK_STOCK_HELP, "_Contents", "F1",
-		"Open the StackPack manual", G_CALLBACK (activate_action) },
+		"Open the Kolumnz manual", G_CALLBACK (activate_action) },
 	{ "new", GTK_STOCK_NEW, "_New", "<control>N",
 		"Starts a new game", G_CALLBACK (menuitem_new) },
 	{ "pause", GTK_STOCK_MEDIA_PAUSE, "_Pause", "Pause",
@@ -327,7 +327,9 @@ static void radio_action (GtkAction *action)
 							gameData.m_StartingRows,
 							userData.m_PiecePreview,
 							gameData.m_BlkType,
-							gameData.m_LastLevel);
+							gameData.m_LastLevel,
+	       					gameData.m_Colors,
+	       					gameData.m_BlkSize);
 	viewResize(drawwidget);
 	viewRedraw(drawwidget, 2, &drawevent);
 }
@@ -462,7 +464,9 @@ static void menuitem_play()
 								gameData.m_StartingRows,
 								userData.m_PiecePreview,
 								gameData.m_BlkType,
-								gameData.m_LastLevel);
+								gameData.m_LastLevel,
+			   					gameData.m_Colors,
+			   					gameData.m_BlkSize);
 		viewRedraw(drawwidget, 2, &drawevent);
 		timertag = g_timeout_add(gameEngineData[0].m_StepDuration,
 								 timeout_callback,
@@ -632,7 +636,7 @@ int main( int   argc,
     gtk_window_resize (GTK_WINDOW (window), userData.width, userData.height);
 	printf("in main x=%d, y=%d\n", userData.x, userData.y);
 	gtk_window_move(GTK_WINDOW (window), userData.x, userData.y);
-    gtk_window_set_title (GTK_WINDOW (window), "GTK StackPack");
+    gtk_window_set_title (GTK_WINDOW (window), "GTK Kolumnz");
     g_signal_connect (G_OBJECT (window), "delete_event",
                       G_CALLBACK (delete_event), NULL);
     /* A vbox to put a menu and a drawing_area in: */
@@ -698,7 +702,9 @@ int main( int   argc,
 							gameData.m_StartingRows,
 							userData.m_PiecePreview,
 							gameData.m_BlkType,
-							gameData.m_LastLevel);
+							gameData.m_LastLevel,
+	       					gameData.m_Colors,
+	       					gameData.m_BlkSize);
 	viewInitialize(drawing_area);
 	
 	gtk_widget_show (drawing_area);

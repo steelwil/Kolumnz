@@ -72,7 +72,9 @@ void GameCreate(struct GameData* pGameData,
 				int startingRows,
 				int preview,
 				int blkTypes,
-				int lastLevel);
+				int lastLevel,
+				int totalColors,
+				int pieceLength);
 /* Operations */
 int GameStart(struct GameData* pGameData);
 int EndGame(struct GameData* pGameData);
