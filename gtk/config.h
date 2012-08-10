@@ -1,25 +1,25 @@
 /* config.h.  Generated from config.h.in by configure.  */
-/* config.h.in.  Generated from configure.in by autoheader.  */
+/* config.h.in.  Generated from configure.ac by autoheader.  */
 #define ENABLE_NLS 1
 /* #undef HAVE_CATGETS */
 #define HAVE_GETTEXT 1
 #define HAVE_LC_MESSAGES 1
 /* #undef HAVE_STPCPY */
 /* #undef HAVE_LIBSM */
-#define PACKAGE_LOCALE_DIR "/usr/local/share/locale"
-#define PACKAGE_DOC_DIR "/usr/local/doc/StackPack"
-#define PACKAGE_DATA_DIR "/usr/local/share"
-#define PACKAGE_PIXMAPS_DIR "/usr/local/share/pixmaps"
-#define PACKAGE_HELP_DIR "/usr/local/share/help"
-#define PACKAGE_MENU_DIR "/usr/local/share"
-#define PACKAGE_SOURCE_DIR "/home/wil/Projects/dev/Kolumnz/gtk"
-#define GETTEXT_PACKAGE "Kolumnz"
+/* #undef PACKAGE_LOCALE_DIR */
+/* #undef PACKAGE_DOC_DIR */
+/* #undef PACKAGE_DATA_DIR */
+/* #undef PACKAGE_PIXMAPS_DIR */
+/* #undef PACKAGE_HELP_DIR */
+/* #undef PACKAGE_MENU_DIR */
+/* #undef PACKAGE_SOURCE_DIR */
+#define GETTEXT_PACKAGE "kolumnz"
 
 /* always defined to indicate that i18n is enabled */
 #define ENABLE_NLS 1
 
-/* Package name for gettext */
-#define GETTEXT_PACKAGE "Kolumnz"
+/* GETTEXT package name */
+#define GETTEXT_PACKAGE "kolumnz"
 
 /* Define to 1 if you have the `bind_textdomain_codeset' function. */
 #define HAVE_BIND_TEXTDOMAIN_CODESET 1
@@ -71,25 +71,25 @@
 #define LT_OBJDIR ".libs/"
 
 /* Name of package */
-#define PACKAGE "StackPack"
+#define PACKAGE "kolumnz"
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT ""
 
-/* Package local directory */
-#define PACKAGE_LOCALE_DIR "/usr/local/share/locale"
-
 /* Define to the full name of this package. */
-#define PACKAGE_NAME ""
+#define PACKAGE_NAME "kolumnz"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING ""
+#define PACKAGE_STRING "kolumnz 0.1"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME ""
+#define PACKAGE_TARNAME "kolumnz"
+
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION ""
+#define PACKAGE_VERSION "0.1"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
